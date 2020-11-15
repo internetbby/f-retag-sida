@@ -1,0 +1,99 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  display: grid;
+  grid-template-columns: [firstline] 1fr [mainbody] 20fr [endline] 1fr [ending];
+  grid-template-rows: [header] 2fr [navbar]1fr [mainbody] auto [footer] 2fr [ending];
+
+  background-color: wheat;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  position: relative;
+}
+
+header {
+  grid-column: firstline / ending;
+  grid-row: header / navbar;
+
+  background-color: palevioletred;
+}
+
+nav.mainNav {
+  position: sticky;
+  top: 0;
+  grid-column: firstline / ending;
+  grid-row: navbar/mainbody;
+  margin-top: 1fr;
+  max-width: 100%;
+
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+
+nav a {
+  flex-grow: 1;
+
+  text-align: center;
+  text-decoration: none;
+  padding: 0.7rem;
+  background-color: powderblue;
+}
+
+a:hover {
+  background-color: white;
+}
+
+.content {
+  grid-column: mainbody/endline;
+  grid-row: mainbody/footer;
+
+  background-color: purple;
+  font-size: 100px;
+}
+
+/* shopping side */
+.content#shopSide {
+  display: grid;
+  grid-template-columns: [navigation] 1fr [clothing] 5fr [ending];
+  justify-content: start;
+}
+
+nav.clothNav {
+  grid-column: navigation / clothing;
+
+  font-size: 1rem;
+
+  display: inline-flex;
+  flex-direction: column;
+}
+
+nav.clotNav {
+  flex-grow: 0;
+  background-color: thistle;
+  overflow: hidden;
+}
+
+a.clothingOption{
+  margin-bottom: 4px;
+  flex-grow: 0;
+}
+
+.clothSide {
+  grid-column: clothing / ending;
+  background-color: yellowgreen;
+
+  font-size: 5rem;
+}
+
+/*end of shop side */
+
+footer {
+  grid-row: footer/ending;
+  grid-column: firstline/ending;
+
+  background-color: powderblue;
+}
