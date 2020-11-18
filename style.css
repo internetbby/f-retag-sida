@@ -5,7 +5,10 @@
 body {
   display: grid;
   grid-template-columns: [firstline] 1fr [mainbody] 20fr [endline] 1fr [ending];
-  grid-template-rows: [header] 2fr [navbar]1fr [mainbody] auto [footer] 2fr [ending];
+  grid-template-rows: [header] 2fr [navbar]1fr [mainbody] auto [footer] 1fr [ending];
+
+  min-height: 100vh;
+  min-width: auto;
 
   background-color: wheat;
 
@@ -111,6 +114,16 @@ a.clothingOption {
   background-color: yellowgreen;
 
   font-size: 5rem;
+}
+
+.clothingFlex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+}
+.clothingFlex > * {
+
 }
 
 /*end of shop side */
