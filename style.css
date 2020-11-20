@@ -10,7 +10,7 @@ body {
   min-height: 100vh;
   min-width: auto;
 
-  background-color: wheat;
+  background-color: white;
 
   position: relative;
 
@@ -22,11 +22,11 @@ header {
   grid-row: header / navbar;
 
   max-width: 100%;
-  background-color: palevioletred;
+  background-image: url(background.gif);
   text-align: center;
 }
 
-header img{
+header img {
   width: 50%;
 }
 
@@ -52,9 +52,9 @@ nav.mainNav {
   display: flex;
   align-items: stretch;
 
-  -webkit-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.23);
--moz-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.23);
-box-shadow: 0px 4px 9px 0px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.23);
 }
 
 nav a {
@@ -63,9 +63,7 @@ nav a {
   text-align: center;
   text-decoration: none;
   padding: 0.7rem;
-  background-color: powderblue;
-
-  
+  background-color: rgb(214, 153, 255);
 }
 
 nav a:hover {
@@ -76,9 +74,12 @@ nav a:hover {
   grid-column: mainbody/endline;
   grid-row: mainbody/footer;
 
-  background-color: purple;
+  background-color: rgb(214, 153, 255);
+  border-radius: 10px;
   font-size: 100px;
   max-width: 100%;
+
+  font-size: 3em;
 }
 
 /* shopping side */
@@ -87,6 +88,8 @@ nav a:hover {
   grid-template-columns: [navigation] 1fr [clothing] 5fr [ending];
   justify-content: start;
   max-width: 100%;
+
+  border-radius: 10px ;
 }
 
 nav.clothNav {
@@ -96,9 +99,11 @@ nav.clothNav {
 
   display: inline-flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 nav.clotNav {
+  border-radius: 10px;
   flex-grow: 0;
   background-color: thistle;
   overflow: hidden;
@@ -110,28 +115,47 @@ a.clothingOption {
 }
 
 .clothSide {
-  grid-column: clothing / ending;
-  background-color: yellowgreen;
+ 
+  background-color: rgb(255, 225, 247);
 
   font-size: 5rem;
+  border-radius: 10px;
+
+  max-width: 100%;
 }
 
-.clothingFlex{
+.clothingFlex {
+
   display: flex;
   flex-wrap: wrap;
+  flex-flow: row;
+
   justify-content: space-around;
-  align-content: space-between;
 }
-.clothingFlex > * {
+
+.clothingItem {
+  flex-grow: 0;
+  flex-basis: 30%;
+
+
+}
+
+.clothingItem img {
+  margin: 40px;
+  max-width: 100%;
+  
 
 }
 
 /*end of shop side */
 
 footer {
+
+  
   grid-row: footer/ending;
   grid-column: firstline/ending;
 
+  margin-top: 30px;
   max-width: 100%;
-  background-color: powderblue;
+  background-image: url(background.gif);
 }
